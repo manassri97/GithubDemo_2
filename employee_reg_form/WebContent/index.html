@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FirstPage</title>
+<script type="text/javascript">
+function checknumber()
+{
+	var i = parseInt(document.getElementById("empno").value);
+	var j =	document.getElementById("empname").value;
+	if(i<=0)
+	{
+		alert("enter the employee number");
+		return false;
+	}
+	if(j.length==0)
+	{
+		alert("enter the employee name");
+		return false;
+	}
+	else
+		return true;
+}
+</script>
+</head>
+<body>
+<form name="myForm" onsubmit="return checknumber()" method="POST" action="Project.html">
+Employee Number :<input type="text" name="employeeno" id="empno"><br>
+Employee Name :<input type="text" name="employeename" id="empname"><br>
+City : 
+<select id ="city">
+<option value ="01">Kanpur</option>
+<option value ="02">Lucknow</option>
+<option value ="03">Agra</option>
+</select><br>
+Country : 
+<select id ="country">
+<option value ="01">Uttar Pradesh</option>
+<option value ="02">Maharashtra</option>
+<option value ="03">Rajasthan</option>
+</select><br>
+<input type="submit" value="submit">  
+</form>
+</body>
+</html>
